@@ -1,0 +1,49 @@
+Here's a shell script that accomplishes the task of summing the digits of a student ID and checking whether the sum is even or odd using a user-defined function.
+
+Code:
+#!/bin/bash
+
+# Function to check if a number is even or odd
+check_even_odd() {
+    local number=$1
+    if (( number % 2 == 0 )); then
+        echo "The sum is an even number"
+    else
+        echo "The sum is an odd number"
+    fi
+}
+
+# Prompt user to enter their student ID
+read -p "Enter your student ID: " student_id
+
+# Initialize sum
+sum=0
+
+# Sum the digits of the student ID
+for (( i=0; i<${#student_id}; i++ )); do
+    digit=${student_id:i:1}
+    sum=$((sum + digit))
+done
+
+
+
+# Output the sum of the digits
+echo "The sum of the digits of your ID is: $sum"
+
+# Check if the sum is even or odd
+check_even_odd $sum
+
+
+Open your terminal.
+Create a new shell script file, for example sum_digits.sh, by running:
+touch sum_digits.sh
+gedit sum_digits.sh
+
+
+Make the script executable by running:
+chmod +x sum_digits.sh
+
+Run the script by executing:
+./sum_digits.sh
+
+
