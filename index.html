@@ -1,0 +1,84 @@
+<!-- Create a Script File: -->
+touch myscript.sh
+
+<!-- Add Execution Permissions: -->
+chmod +x myscript.sh
+
+<!-- Hello World Script: -->
+echo "Hello, World!"
+
+
+<!-- Defining Variables -->
+#!/bin/bash
+NAME="Alice"
+echo "Hello, $NAME"
+
+<!-- If-Else Statement: -->
+#!/bin/bash
+if [ "$NAME" == "Alice" ]; then
+  echo "Welcome, Alice!"
+else
+  echo "Who are you?"
+fi
+
+<!-- For Loop: -->
+#!/bin/bash
+for i in {1..5}
+do
+  echo "Welcome $i"
+done
+
+<!-- Defining and Using Functions -->
+#!/bin/bash
+greet() {
+  echo "Hello, $1"
+}
+
+greet "Alice"
+greet "Bob"
+
+<!-- Using Command-Line Arguments -->
+#!/bin/bash
+echo "Script name: $0"
+echo "First argument: $1"
+echo "Second argument: $2"
+
+<!-- Run the script with arguments: -->
+./myscript.sh arg1 arg2
+
+<!-- Using Exit Status -->
+#!/bin/bash
+cp source.txt destination.txt
+if [ $? -eq 0 ]; then
+  echo "Copy successful"
+else
+  echo "Copy failed"
+fi
+
+
+<!-- Example Script -->
+#!/bin/bash
+
+# Function to display a welcome message
+welcome_message() {
+    echo "Welcome, $1!"
+}
+
+# Main script
+echo "Starting the script..."
+
+# Check if an argument is provided
+if [ -z "$1" ]; then
+    echo "No name provided. Usage: ./myscript.sh <name>"
+    exit 1
+fi
+
+# Call the function with the provided argument
+welcome_message "$1"
+
+# Loop to display numbers
+for i in {1..5}; do
+    echo "Number: $i"
+done
+
+echo "Script completed."
