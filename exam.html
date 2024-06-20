@@ -1,0 +1,48 @@
+<!-- Shell script Question Answer -->
+<!-- Create a directory named lab_course: -->
+mkdir lab_course
+
+
+<!-- Inside lab_course, create an empty file named notes.txt: -->
+cd lab_course
+touch notes.txt
+
+<!-- Copy notes.txt to a new file named backup_notes.txt within the same directory: -->
+cp notes.txt backup_notes.txt
+
+<!-- Move backup_notes.txt to the parent directory: -->
+mv backup_notes.txt ..
+
+<!-- Change the permissions of notes.txt to be readable and writable by the owner, and readable by the group and others: -->
+chmod 644 notes.txt
+
+<!-- Display the current permissions of notes.txt: -->
+ls -l notes.txt
+
+
+<!-- Open Vi and create a new file named sample.txt: -->
+vi sample.txt
+
+<!-- Enter insert mode and write the following lines into the file: -->
+# Press 'i' to enter insert mode in Vi
+Vim is a powerful text editor.
+It has many modes and commands.
+
+<!-- Save the file and exit Vi: -->
+# Press 'Esc' to exit insert mode
+# Type ':wq' and press 'Enter' to save and quit Vi
+
+<!-- Important Things to Learn -->
+<!-- Explanation:
+mkdir: Creates a new directory.
+cd: Changes the current directory.
+touch: Creates an empty file.
+cp: Copies a file.
+mv: Moves or renames a file.
+chmod 644: Changes the file permissions to rw-r--r-- (readable and writable by the owner, readable by the group and others).
+ls -l: Lists the details of the files, including permissions. -->
+<!-- vi: Opens the Vi text editor. -->
+<!-- In Vi, i enters insert mode, Esc exits insert mode, :wq saves the file and exits Vi. -->
+
+
+
